@@ -102,10 +102,10 @@
 				8087EDB12AC0439000FBDBC6 /* AppDelegate.swift */,
 				8087EDB32AC0439000FBDBC6 /* SceneDelegate.swift */,
 				8087EDB52AC0439000FBDBC6 /* ViewController.swift */,
+				8087EDE12AC05FAD00FBDBC6 /* Controllers */,
+				8087EDE22AC05FCC00FBDBC6 /* Resources */,
+				8087EDE32AC0601200FBDBC6 /* Supporting */,
 				8087EDB72AC0439000FBDBC6 /* Main.storyboard */,
-				8087EDBA2AC0439100FBDBC6 /* Assets.xcassets */,
-				8087EDBC2AC0439100FBDBC6 /* LaunchScreen.storyboard */,
-				8087EDBF2AC0439100FBDBC6 /* Info.plist */,
 			);
 			path = BluetoothSampleApp;
 			sourceTree = "<group>";
@@ -125,6 +125,30 @@
 				8087EDD42AC0439100FBDBC6 /* BluetoothSampleAppUITestsLaunchTests.swift */,
 			);
 			path = BluetoothSampleAppUITests;
+			sourceTree = "<group>";
+		};
+		8087EDE12AC05FAD00FBDBC6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		8087EDE22AC05FCC00FBDBC6 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8087EDBA2AC0439100FBDBC6 /* Assets.xcassets */,
+				8087EDBC2AC0439100FBDBC6 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		8087EDE32AC0601200FBDBC6 /* Supporting */ = {
+			isa = PBXGroup;
+			children = (
+				8087EDBF2AC0439100FBDBC6 /* Info.plist */,
+			);
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
