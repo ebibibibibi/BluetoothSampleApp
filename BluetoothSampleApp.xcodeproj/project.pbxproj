@@ -16,6 +16,10 @@
 		8087EDC92AC0439100FBDBC6 /* BluetoothSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDC82AC0439100FBDBC6 /* BluetoothSampleAppTests.swift */; };
 		8087EDD32AC0439100FBDBC6 /* BluetoothSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDD22AC0439100FBDBC6 /* BluetoothSampleAppUITests.swift */; };
 		8087EDD52AC0439100FBDBC6 /* BluetoothSampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDD42AC0439100FBDBC6 /* BluetoothSampleAppUITestsLaunchTests.swift */; };
+		8087EDE52AC1B71A00FBDBC6 /* メモ用.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDE42AC1B71A00FBDBC6 /* メモ用.swift */; };
+		8087EDEA2AC1BA9100FBDBC6 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 8087EDE92AC1BA9100FBDBC6 /* SwiftLintFramework */; };
+		8087EDEC2AC1BA9100FBDBC6 /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 8087EDEB2AC1BA9100FBDBC6 /* swiftlint */; };
+		8087EDEF2AC1BB0E00FBDBC6 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8087EDEE2AC1BB0E00FBDBC6 /* MessageKit */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +53,7 @@
 		8087EDCE2AC0439100FBDBC6 /* BluetoothSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8087EDD22AC0439100FBDBC6 /* BluetoothSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSampleAppUITests.swift; sourceTree = "<group>"; };
 		8087EDD42AC0439100FBDBC6 /* BluetoothSampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8087EDE42AC1B71A00FBDBC6 /* メモ用.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "メモ用.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +61,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8087EDEF2AC1BB0E00FBDBC6 /* MessageKit in Frameworks */,
+				8087EDEA2AC1BA9100FBDBC6 /* SwiftLintFramework in Frameworks */,
+				8087EDEC2AC1BA9100FBDBC6 /* swiftlint in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,6 +110,8 @@
 				8087EDB12AC0439000FBDBC6 /* AppDelegate.swift */,
 				8087EDB32AC0439000FBDBC6 /* SceneDelegate.swift */,
 				8087EDB52AC0439000FBDBC6 /* ViewController.swift */,
+				8087EDE72AC1B7D900FBDBC6 /* Constants */,
+				8087EDE62AC1B72400FBDBC6 /* 色々混ぜたやつ */,
 				8087EDE12AC05FAD00FBDBC6 /* Controllers */,
 				8087EDE22AC05FCC00FBDBC6 /* Resources */,
 				8087EDE32AC0601200FBDBC6 /* Supporting */,
@@ -151,6 +161,22 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
+		8087EDE62AC1B72400FBDBC6 /* 色々混ぜたやつ */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "色々混ぜたやつ";
+			path = "色々混ぜたやつ";
+			sourceTree = "<group>";
+		};
+		8087EDE72AC1B7D900FBDBC6 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				8087EDE42AC1B71A00FBDBC6 /* メモ用.swift */,
+			);
+			path = Constants;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -167,6 +193,11 @@
 			dependencies = (
 			);
 			name = BluetoothSampleApp;
+			packageProductDependencies = (
+				8087EDE92AC1BA9100FBDBC6 /* SwiftLintFramework */,
+				8087EDEB2AC1BA9100FBDBC6 /* swiftlint */,
+				8087EDEE2AC1BB0E00FBDBC6 /* MessageKit */,
+			);
 			productName = BluetoothSampleApp;
 			productReference = 8087EDAE2AC0439000FBDBC6 /* BluetoothSampleApp.app */;
 			productType = "com.apple.product-type.application";
@@ -239,6 +270,10 @@
 				Base,
 			);
 			mainGroup = 8087EDA52AC0439000FBDBC6;
+			packageReferences = (
+				8087EDE82AC1BA9100FBDBC6 /* XCRemoteSwiftPackageReference "SwiftLint" */,
+				8087EDED2AC1BB0E00FBDBC6 /* XCRemoteSwiftPackageReference "MessageKit" */,
+			);
 			productRefGroup = 8087EDAF2AC0439000FBDBC6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -285,6 +320,7 @@
 				8087EDB62AC0439000FBDBC6 /* ViewController.swift in Sources */,
 				8087EDB22AC0439000FBDBC6 /* AppDelegate.swift in Sources */,
 				8087EDB42AC0439000FBDBC6 /* SceneDelegate.swift in Sources */,
+				8087EDE52AC1B71A00FBDBC6 /* メモ用.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -620,6 +656,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		8087EDE82AC1BA9100FBDBC6 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.52.4;
+			};
+		};
+		8087EDED2AC1BB0E00FBDBC6 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		8087EDE92AC1BA9100FBDBC6 /* SwiftLintFramework */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8087EDE82AC1BA9100FBDBC6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = SwiftLintFramework;
+		};
+		8087EDEB2AC1BA9100FBDBC6 /* swiftlint */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8087EDE82AC1BA9100FBDBC6 /* XCRemoteSwiftPackageReference "SwiftLint" */;
+			productName = swiftlint;
+		};
+		8087EDEE2AC1BB0E00FBDBC6 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 8087EDED2AC1BB0E00FBDBC6 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8087EDA62AC0439000FBDBC6 /* Project object */;
 }
