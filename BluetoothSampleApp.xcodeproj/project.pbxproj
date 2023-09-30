@@ -9,8 +9,6 @@
 /* Begin PBXBuildFile section */
 		8087EDB22AC0439000FBDBC6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDB12AC0439000FBDBC6 /* AppDelegate.swift */; };
 		8087EDB42AC0439000FBDBC6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDB32AC0439000FBDBC6 /* SceneDelegate.swift */; };
-		8087EDB62AC0439000FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDB52AC0439000FBDBC6 /* ViewController.swift */; };
-		8087EDB92AC0439000FBDBC6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8087EDB72AC0439000FBDBC6 /* Main.storyboard */; };
 		8087EDBB2AC0439100FBDBC6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8087EDBA2AC0439100FBDBC6 /* Assets.xcassets */; };
 		8087EDBE2AC0439100FBDBC6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8087EDBC2AC0439100FBDBC6 /* LaunchScreen.storyboard */; };
 		8087EDC92AC0439100FBDBC6 /* BluetoothSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDC82AC0439100FBDBC6 /* BluetoothSampleAppTests.swift */; };
@@ -43,8 +41,6 @@
 		8087EDAE2AC0439000FBDBC6 /* BluetoothSampleApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BluetoothSampleApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8087EDB12AC0439000FBDBC6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8087EDB32AC0439000FBDBC6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8087EDB52AC0439000FBDBC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		8087EDB82AC0439000FBDBC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8087EDBA2AC0439100FBDBC6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8087EDBD2AC0439100FBDBC6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8087EDBF2AC0439100FBDBC6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -109,13 +105,12 @@
 			children = (
 				8087EDB12AC0439000FBDBC6 /* AppDelegate.swift */,
 				8087EDB32AC0439000FBDBC6 /* SceneDelegate.swift */,
-				8087EDB52AC0439000FBDBC6 /* ViewController.swift */,
 				8087EDE72AC1B7D900FBDBC6 /* Constants */,
-				8087EDE62AC1B72400FBDBC6 /* 色々混ぜたやつ */,
-				8087EDE12AC05FAD00FBDBC6 /* Controllers */,
+				8087EDF12AC88D5700FBDBC6 /* Models */,
+				8087EDF22AC88DA700FBDBC6 /* Scenes */,
 				8087EDE22AC05FCC00FBDBC6 /* Resources */,
+				8087EDF02AC88D0600FBDBC6 /* Services */,
 				8087EDE32AC0601200FBDBC6 /* Supporting */,
-				8087EDB72AC0439000FBDBC6 /* Main.storyboard */,
 			);
 			path = BluetoothSampleApp;
 			sourceTree = "<group>";
@@ -137,13 +132,6 @@
 			path = BluetoothSampleAppUITests;
 			sourceTree = "<group>";
 		};
-		8087EDE12AC05FAD00FBDBC6 /* Controllers */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Controllers;
-			sourceTree = "<group>";
-		};
 		8087EDE22AC05FCC00FBDBC6 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
@@ -161,20 +149,33 @@
 			path = Supporting;
 			sourceTree = "<group>";
 		};
-		8087EDE62AC1B72400FBDBC6 /* 色々混ぜたやつ */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			name = "色々混ぜたやつ";
-			path = "色々混ぜたやつ";
-			sourceTree = "<group>";
-		};
 		8087EDE72AC1B7D900FBDBC6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
 				8087EDE42AC1B71A00FBDBC6 /* メモ用.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		8087EDF02AC88D0600FBDBC6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		8087EDF12AC88D5700FBDBC6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		8087EDF22AC88DA700FBDBC6 /* Scenes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Scenes;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,7 +293,6 @@
 			files = (
 				8087EDBE2AC0439100FBDBC6 /* LaunchScreen.storyboard in Resources */,
 				8087EDBB2AC0439100FBDBC6 /* Assets.xcassets in Resources */,
-				8087EDB92AC0439000FBDBC6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,7 +317,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8087EDB62AC0439000FBDBC6 /* ViewController.swift in Sources */,
 				8087EDB22AC0439000FBDBC6 /* AppDelegate.swift in Sources */,
 				8087EDB42AC0439000FBDBC6 /* SceneDelegate.swift in Sources */,
 				8087EDE52AC1B71A00FBDBC6 /* メモ用.swift in Sources */,
@@ -357,14 +356,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		8087EDB72AC0439000FBDBC6 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				8087EDB82AC0439000FBDBC6 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		8087EDBC2AC0439100FBDBC6 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
