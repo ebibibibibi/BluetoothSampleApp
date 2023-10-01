@@ -201,16 +201,16 @@ extension BluetoothCentralManager: CBPeripheralDelegate {
     /// ペリフェラルは、characteristicの購読が成功したかどうかを返す。
     func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
         if let error = error {
-                    print("Characteristic update notification failed: \(error.localizedDescription)")
+                    print("Characteristic は通知の更新に失敗した: \(error.localizedDescription)")
                     return
                 }
         // このcharacteristicが設定したものであることを確認
         guard characteristic.uuid == BluetoothCharacteristic.chatID else { return }
         // 正常に通知として設定されているか確認
         if characteristic.isNotifying {
-                    print("Characteristic notifications have begun.")
+                    print("Characteristic notifications が始まったよ.")
                 } else {
-                    print("Characteristic notifications have stopped. Disconnecting.")
+                    print("Characteristic notifications は止まっている。切断します。")
                     centralManager?.cancelPeripheralConnection(peripheral)
                 }
     }
