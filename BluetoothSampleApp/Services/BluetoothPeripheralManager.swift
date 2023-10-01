@@ -47,20 +47,20 @@ extension BluetoothPeripheralManager: CBPeripheralManagerDelegate {
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         switch peripheral.state {
         case .unknown:
-            print("Bluetoothの状態が `.unknown` に変更されました")
+            print("peripheralの状態が `.unknown` に変更されました")
         case .resetting:
-            print("Bluetoothの状態が `.resetting` に変更されました")
+            print("peripheralの状態が `.resetting` に変更されました")
         case .unsupported:
-            print("Bluetoothの状態が `.unsupported` に変更されました")
+            print("peripheralの状態が `.unsupported` に変更されました")
         case .unauthorized:
-            print("Bluetoothの状態が `.unauthorized` に変更されました")
+            print("peripheralの状態が `.unauthorized` に変更されました")
         case .poweredOff:
-            print("Bluetoothの状態が `.poweredOff` に変更されました")
+            print("peripheralの状態が `.poweredOff` に変更されました")
         case .poweredOn:
-            print("Bluetoothの状態が `.poweredOn` に変更されました")
+            print("peripheralの状態が `.poweredOn` に変更されました")
             if advertPending { startAdvertising() }
         @unknown default:
-            print("Bluetoothの状態が`an unknown state`に変更されました")
+            print("peripheralの状態が`an unknown state`に変更されました")
         }
     }
 }
