@@ -1,5 +1,5 @@
 //
-//  BluetoothService.swift
+//  BluetoothConstants.swift
 //  BluetoothSampleApp
 //
 //  Created by kotomi tahkahashi on 2023/10/01.
@@ -16,7 +16,13 @@ import CoreBluetooth
 /// 弊社のチャットアプリでは、独自のサービスとそのサービスIDを定義します。
 /// これにより、スキャン時に検出できるようにします。
 struct BluetoothService {
-    static let chatServiceID = CBUUID(string: "")
     // TODO: CBUUIDを後ほど設定する
-    static let chatCharacteristicID = CBUUID(string: "")
+    static let chatID = CBUUID(string: "")
+}
+
+
+/// Bluetoothサービスには、サービスの特定の機能を表す多くの特性が含まれています。この例では、チャットサービスにはデバイス間でデータを移動するために使用される特性が含まれます。
+struct BluetoothCharacteristic {
+    // TODO: CBUUIDを後ほど設定する
+    static let chatID = CBUUID(string: "")
 }
