@@ -14,10 +14,25 @@
 		8087EDC92AC0439100FBDBC6 /* BluetoothSampleAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDC82AC0439100FBDBC6 /* BluetoothSampleAppTests.swift */; };
 		8087EDD32AC0439100FBDBC6 /* BluetoothSampleAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDD22AC0439100FBDBC6 /* BluetoothSampleAppUITests.swift */; };
 		8087EDD52AC0439100FBDBC6 /* BluetoothSampleAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDD42AC0439100FBDBC6 /* BluetoothSampleAppUITestsLaunchTests.swift */; };
-		8087EDE52AC1B71A00FBDBC6 /* メモ用.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDE42AC1B71A00FBDBC6 /* メモ用.swift */; };
+		8087EDE52AC1B71A00FBDBC6 /* 記事.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDE42AC1B71A00FBDBC6 /* 記事.swift */; };
 		8087EDEA2AC1BA9100FBDBC6 /* SwiftLintFramework in Frameworks */ = {isa = PBXBuildFile; productRef = 8087EDE92AC1BA9100FBDBC6 /* SwiftLintFramework */; };
 		8087EDEC2AC1BA9100FBDBC6 /* swiftlint in Frameworks */ = {isa = PBXBuildFile; productRef = 8087EDEB2AC1BA9100FBDBC6 /* swiftlint */; };
 		8087EDEF2AC1BB0E00FBDBC6 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 8087EDEE2AC1BB0E00FBDBC6 /* MessageKit */; };
+		8087EDFA2AC88F7300FBDBC6 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDF92AC88F7200FBDBC6 /* JoinViewController.swift */; };
+		8087EDFB2AC88F7300FBDBC6 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDF92AC88F7200FBDBC6 /* JoinViewController.swift */; };
+		8087EDFC2AC88F7300FBDBC6 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EDF92AC88F7200FBDBC6 /* JoinViewController.swift */; };
+		8087EDFE2AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8087EDFD2AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard */; };
+		8087EDFF2AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8087EDFD2AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard */; };
+		8087EE002AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8087EDFD2AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard */; };
+		8087EE022AC88FAD00FBDBC6 /* JoinTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE012AC88FAD00FBDBC6 /* JoinTableHeaderView.swift */; };
+		8087EE032AC88FAD00FBDBC6 /* JoinTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE012AC88FAD00FBDBC6 /* JoinTableHeaderView.swift */; };
+		8087EE042AC88FAD00FBDBC6 /* JoinTableHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE012AC88FAD00FBDBC6 /* JoinTableHeaderView.swift */; };
+		8087EE062AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE052AC8EF9D00FBDBC6 /* BluetoothRole.swift */; };
+		8087EE072AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE052AC8EF9D00FBDBC6 /* BluetoothRole.swift */; };
+		8087EE082AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE052AC8EF9D00FBDBC6 /* BluetoothRole.swift */; };
+		8087EE0A2AC8F08200FBDBC6 /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE092AC8F08200FBDBC6 /* BluetoothService.swift */; };
+		8087EE0B2AC8F08200FBDBC6 /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE092AC8F08200FBDBC6 /* BluetoothService.swift */; };
+		8087EE0C2AC8F08200FBDBC6 /* BluetoothService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE092AC8F08200FBDBC6 /* BluetoothService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,7 +64,12 @@
 		8087EDCE2AC0439100FBDBC6 /* BluetoothSampleAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BluetoothSampleAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8087EDD22AC0439100FBDBC6 /* BluetoothSampleAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSampleAppUITests.swift; sourceTree = "<group>"; };
 		8087EDD42AC0439100FBDBC6 /* BluetoothSampleAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothSampleAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		8087EDE42AC1B71A00FBDBC6 /* メモ用.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "メモ用.swift"; sourceTree = "<group>"; };
+		8087EDE42AC1B71A00FBDBC6 /* 記事.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "記事.swift"; sourceTree = "<group>"; };
+		8087EDF92AC88F7200FBDBC6 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
+		8087EDFD2AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = JoinTableHeaderView.storyboard; sourceTree = "<group>"; };
+		8087EE012AC88FAD00FBDBC6 /* JoinTableHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinTableHeaderView.swift; sourceTree = "<group>"; };
+		8087EE052AC8EF9D00FBDBC6 /* BluetoothRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothRole.swift; sourceTree = "<group>"; };
+		8087EE092AC8F08200FBDBC6 /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +125,7 @@
 			children = (
 				8087EDB12AC0439000FBDBC6 /* AppDelegate.swift */,
 				8087EDB32AC0439000FBDBC6 /* SceneDelegate.swift */,
+				8087EDE42AC1B71A00FBDBC6 /* 記事.swift */,
 				8087EDE72AC1B7D900FBDBC6 /* Constants */,
 				8087EDF12AC88D5700FBDBC6 /* Models */,
 				8087EDF22AC88DA700FBDBC6 /* Scenes */,
@@ -152,7 +173,8 @@
 		8087EDE72AC1B7D900FBDBC6 /* Constants */ = {
 			isa = PBXGroup;
 			children = (
-				8087EDE42AC1B71A00FBDBC6 /* メモ用.swift */,
+				8087EE052AC8EF9D00FBDBC6 /* BluetoothRole.swift */,
+				8087EE092AC8F08200FBDBC6 /* BluetoothService.swift */,
 			);
 			path = Constants;
 			sourceTree = "<group>";
@@ -174,8 +196,43 @@
 		8087EDF22AC88DA700FBDBC6 /* Scenes */ = {
 			isa = PBXGroup;
 			children = (
+				8087EDF32AC88EF700FBDBC6 /* Chat */,
+				8087EDF72AC88F2500FBDBC6 /* Join */,
 			);
 			path = Scenes;
+			sourceTree = "<group>";
+		};
+		8087EDF32AC88EF700FBDBC6 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		8087EDF62AC88F1100FBDBC6 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		8087EDF72AC88F2500FBDBC6 /* Join */ = {
+			isa = PBXGroup;
+			children = (
+				8087EDF92AC88F7200FBDBC6 /* JoinViewController.swift */,
+				8087EDF82AC88F3F00FBDBC6 /* Accessories */,
+				8087EDF62AC88F1100FBDBC6 /* Cells */,
+			);
+			path = Join;
+			sourceTree = "<group>";
+		};
+		8087EDF82AC88F3F00FBDBC6 /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				8087EDFD2AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard */,
+				8087EE012AC88FAD00FBDBC6 /* JoinTableHeaderView.swift */,
+			);
+			path = Accessories;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8087EDBE2AC0439100FBDBC6 /* LaunchScreen.storyboard in Resources */,
+				8087EDFE2AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard in Resources */,
 				8087EDBB2AC0439100FBDBC6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -300,6 +358,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8087EDFF2AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,6 +366,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8087EE002AC88FA100FBDBC6 /* JoinTableHeaderView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,9 +377,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8087EE062AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */,
 				8087EDB22AC0439000FBDBC6 /* AppDelegate.swift in Sources */,
+				8087EE0A2AC8F08200FBDBC6 /* BluetoothService.swift in Sources */,
 				8087EDB42AC0439000FBDBC6 /* SceneDelegate.swift in Sources */,
-				8087EDE52AC1B71A00FBDBC6 /* メモ用.swift in Sources */,
+				8087EDFA2AC88F7300FBDBC6 /* JoinViewController.swift in Sources */,
+				8087EE022AC88FAD00FBDBC6 /* JoinTableHeaderView.swift in Sources */,
+				8087EDE52AC1B71A00FBDBC6 /* 記事.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,7 +391,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8087EDFB2AC88F7300FBDBC6 /* JoinViewController.swift in Sources */,
+				8087EE032AC88FAD00FBDBC6 /* JoinTableHeaderView.swift in Sources */,
+				8087EE072AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */,
 				8087EDC92AC0439100FBDBC6 /* BluetoothSampleAppTests.swift in Sources */,
+				8087EE0B2AC8F08200FBDBC6 /* BluetoothService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,8 +403,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8087EE042AC88FAD00FBDBC6 /* JoinTableHeaderView.swift in Sources */,
 				8087EDD32AC0439100FBDBC6 /* BluetoothSampleAppUITests.swift in Sources */,
+				8087EDFC2AC88F7300FBDBC6 /* JoinViewController.swift in Sources */,
 				8087EDD52AC0439100FBDBC6 /* BluetoothSampleAppUITestsLaunchTests.swift in Sources */,
+				8087EE0C2AC8F08200FBDBC6 /* BluetoothService.swift in Sources */,
+				8087EE082AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
