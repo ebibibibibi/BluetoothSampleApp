@@ -16,6 +16,9 @@ final class BluetoothCentralManager: NSObject {
     // スキャンが延長されたか
     private var scanPending = false
     
+    // 接続したペリフェラル
+    private var peripheral: CBPeripheral?
+    
     /// エリア内のperipheralデバイスのスキャン開始
     public func start() {
         // セントラルマネージャーを作成（これによりBluetoothの起動 開始）。
@@ -36,6 +39,7 @@ final class BluetoothCentralManager: NSObject {
 
 // MARK: - Private -
 extension BluetoothCentralManager {
+    /// Bluetoothが起動し、準備ができたら、サポートするサービスを宣伝しているペリフェラルをスキャンを開始します。
     fileprivate func startScanning() {
         guard !(centralManager?.isScanning ?? true) else { return }
         
@@ -47,6 +51,8 @@ extension BluetoothCentralManager {
 
 // MARK: - Central Manager Delegate -
 extension BluetoothCentralManager: CBCentralManagerDelegate {
+    /// centralManagerの Bluetoothの状態が変化したときに呼び出される
+    /// 主にBluetoothが起動完了したとき呼び出される。
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         switch central.state {
         case .unknown:
@@ -67,8 +73,37 @@ extension BluetoothCentralManager: CBCentralManagerDelegate {
         }
     }
     
-    func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
+    /// スキャン中、互換性のあるデバイスが検出されると呼び出される。
+    func centralManager(_ central: CBCentralManager,
+                            didDiscover peripheral: CBPeripheral,
+                            advertisementData: [String: Any],
+                        rssi RSSI: NSNumber) {
         print("FOUND")
+        // 他のペリフェラルは無視
+        // TODO: ※ なぜ？
+        guard self.peripheral == nil else { return }
+        
+        // advertisementData には CBAdvertisementDataServiceUUIDsKey に定義された全てのサービスUUIDに加えて、デバイスの名前やメーカー名などのペリフェラルに関する情報が含まれている。
+        // CBAdvertisementDataLocalNameKey は通常、ペリフェラルのデバイス名を保持
+        if let deviceName = advertisementData[CBAdvertisementDataLocalNameKey] {
+            print("Peripheral \(deviceName) discovered.")
+        } else {
+            print("Compatible device discovered.互換性のあるデバイスが見つかりました。")
+        }
+        // RSSI = 相対信号強度
+        print("RSSI is \(RSSI)")
+        
+        // ペリフェラルオブジェクトへの強力な参照を保持。
+        // そうしないと、接続中に解放されてしまう。
+        self.peripheral = peripheral
+        
+        // サービスIDに一致するペリフェラルを見つけたら、それに接続する。
+        centralManager?.connect(peripheral, options: nil)
+    }
+    
+    /// ペリフェラルへの接続を確立できたときに呼び出される。
+    func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
+        
     }
     
 }
