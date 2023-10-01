@@ -36,6 +36,9 @@
 		8087EE0E2AC8F36600FBDBC6 /* BluetoothCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE0D2AC8F36600FBDBC6 /* BluetoothCentralManager.swift */; };
 		8087EE0F2AC8F36600FBDBC6 /* BluetoothCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE0D2AC8F36600FBDBC6 /* BluetoothCentralManager.swift */; };
 		8087EE102AC8F36600FBDBC6 /* BluetoothCentralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE0D2AC8F36600FBDBC6 /* BluetoothCentralManager.swift */; };
+		8087EE122AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */; };
+		8087EE132AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */; };
+		8087EE142AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,7 @@
 		8087EE052AC8EF9D00FBDBC6 /* BluetoothRole.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothRole.swift; sourceTree = "<group>"; };
 		8087EE092AC8F08200FBDBC6 /* BluetoothService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothService.swift; sourceTree = "<group>"; };
 		8087EE0D2AC8F36600FBDBC6 /* BluetoothCentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCentralManager.swift; sourceTree = "<group>"; };
+		8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -187,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				8087EE0D2AC8F36600FBDBC6 /* BluetoothCentralManager.swift */,
+				8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -385,6 +390,7 @@
 				8087EE062AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */,
 				8087EDB22AC0439000FBDBC6 /* AppDelegate.swift in Sources */,
 				8087EE0E2AC8F36600FBDBC6 /* BluetoothCentralManager.swift in Sources */,
+				8087EE122AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */,
 				8087EE0A2AC8F08200FBDBC6 /* BluetoothService.swift in Sources */,
 				8087EDB42AC0439000FBDBC6 /* SceneDelegate.swift in Sources */,
 				8087EDFA2AC88F7300FBDBC6 /* JoinViewController.swift in Sources */,
@@ -403,6 +409,7 @@
 				8087EDC92AC0439100FBDBC6 /* BluetoothSampleAppTests.swift in Sources */,
 				8087EE0F2AC8F36600FBDBC6 /* BluetoothCentralManager.swift in Sources */,
 				8087EE0B2AC8F08200FBDBC6 /* BluetoothService.swift in Sources */,
+				8087EE132AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,6 +417,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8087EE142AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */,
 				8087EE042AC88FAD00FBDBC6 /* JoinTableHeaderView.swift in Sources */,
 				8087EDD32AC0439100FBDBC6 /* BluetoothSampleAppUITests.swift in Sources */,
 				8087EDFC2AC88F7300FBDBC6 /* JoinViewController.swift in Sources */,

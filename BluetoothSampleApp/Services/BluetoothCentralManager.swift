@@ -8,7 +8,7 @@
 import UIKit
 import CoreBluetooth
 
-/// Bluetooth接続に伴い、統制の役割を有するclass
+/// Bluetooth接続に伴い、ホストとしての統制を行うclass
 final class BluetoothCentralManager: NSObject {
 
     private var centralManager: CBCentralManager!
