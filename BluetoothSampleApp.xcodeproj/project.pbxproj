@@ -36,6 +36,9 @@
 		8087EE122AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */; };
 		8087EE132AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */; };
 		8087EE142AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */; };
+		8087EE172AC9C79700FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE162AC9C79700FBDBC6 /* ViewController.swift */; };
+		8087EE182AC9C79700FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE162AC9C79700FBDBC6 /* ViewController.swift */; };
+		8087EE192AC9C79700FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE162AC9C79700FBDBC6 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -74,6 +77,7 @@
 		8087EE092AC8F08200FBDBC6 /* BluetoothConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothConstants.swift; sourceTree = "<group>"; };
 		8087EE0D2AC8F36600FBDBC6 /* BluetoothCentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCentralManager.swift; sourceTree = "<group>"; };
 		8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralManager.swift; sourceTree = "<group>"; };
+		8087EE162AC9C79700FBDBC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -130,6 +134,7 @@
 				8087EDB12AC0439000FBDBC6 /* AppDelegate.swift */,
 				8087EDB32AC0439000FBDBC6 /* SceneDelegate.swift */,
 				8087EDE42AC1B71A00FBDBC6 /* 記事.swift */,
+				8087EE152AC9C77900FBDBC6 /* Controllers */,
 				8087EDE72AC1B7D900FBDBC6 /* Constants */,
 				8087EDF12AC88D5700FBDBC6 /* Models */,
 				8087EDF22AC88DA700FBDBC6 /* Scenes */,
@@ -238,6 +243,14 @@
 				8087EE012AC88FAD00FBDBC6 /* JoinTableHeaderView.swift */,
 			);
 			path = Accessories;
+			sourceTree = "<group>";
+		};
+		8087EE152AC9C77900FBDBC6 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				8087EE162AC9C79700FBDBC6 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -385,6 +398,7 @@
 				8087EE062AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */,
 				8087EDB22AC0439000FBDBC6 /* AppDelegate.swift in Sources */,
 				8087EE0E2AC8F36600FBDBC6 /* BluetoothCentralManager.swift in Sources */,
+				8087EE172AC9C79700FBDBC6 /* ViewController.swift in Sources */,
 				8087EE122AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */,
 				8087EE0A2AC8F08200FBDBC6 /* BluetoothConstants.swift in Sources */,
 				8087EDB42AC0439000FBDBC6 /* SceneDelegate.swift in Sources */,
@@ -401,6 +415,7 @@
 				8087EE072AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */,
 				8087EDC92AC0439100FBDBC6 /* BluetoothSampleAppTests.swift in Sources */,
 				8087EE0F2AC8F36600FBDBC6 /* BluetoothCentralManager.swift in Sources */,
+				8087EE182AC9C79700FBDBC6 /* ViewController.swift in Sources */,
 				8087EE0B2AC8F08200FBDBC6 /* BluetoothConstants.swift in Sources */,
 				8087EE132AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */,
 			);
@@ -416,6 +431,7 @@
 				8087EE102AC8F36600FBDBC6 /* BluetoothCentralManager.swift in Sources */,
 				8087EDD52AC0439100FBDBC6 /* BluetoothSampleAppUITestsLaunchTests.swift in Sources */,
 				8087EE0C2AC8F08200FBDBC6 /* BluetoothConstants.swift in Sources */,
+				8087EE192AC9C79700FBDBC6 /* ViewController.swift in Sources */,
 				8087EE082AC8EF9D00FBDBC6 /* BluetoothRole.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
