@@ -82,4 +82,20 @@ extension BluetoothPeripheralManager: CBPeripheralManagerDelegate {
             startAdvertising()
         }
     }
+    
+    /// キャラクタリスティックの購読が行われた際呼び出される。
+    /// データを送信できるようにする。
+    func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
+        print("セントラルがペリフェラルにサブスクライブしました。")
+        
+        if let characteristic = self.characteristic {
+            // セントラルへメッセージを送信する。
+            let data = "Hello!".data(using: .utf8)!
+            peripheralManager?.updateValue(data, for: characteristic, onSubscribedCentrals: nil)
+        }
+    }
+    /// サブスクライブしていたセントラルがサブスクリプションを解除したときに呼び出される。
+    func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didUnsubscribeFrom characteristic: CBCharacteristic) {
+            print("セントラルがペリフェラルからサブスクライブを解除しました。")
+        }
 }
