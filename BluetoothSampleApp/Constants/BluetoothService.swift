@@ -16,5 +16,7 @@ import CoreBluetooth
 /// 弊社のチャットアプリでは、独自のサービスとそのサービスIDを定義します。
 /// これにより、スキャン時に検出できるようにします。
 struct BluetoothService {
-    static let chatServiceID = CBUUID(string: "42332fe8-9915-11ea-bb37-0242ac130002")
+    static let chatServiceID = CBUUID(string: "")
+    // TODO: CBUUIDを後ほど設定する
+    static let chatCharacteristicID = CBUUID(string: "")
 }
