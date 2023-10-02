@@ -16,6 +16,10 @@ final class BluetoothPeripheralManager: NSObject {
     
     // チャットデータのフローを制御するサービス内のcharacteristic
     private var characteristic: CBMutableCharacteristic?
+    
+    // 接続に成功したセントラル
+    private var central: CBCentral?
+    
     // アドバタイズが延長されているかどうか
     private var advertPending = false
     
@@ -96,6 +100,27 @@ extension BluetoothPeripheralManager: CBPeripheralManagerDelegate {
     }
     /// サブスクライブしていたセントラルがサブスクリプションを解除したときに呼び出される。
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didUnsubscribeFrom characteristic: CBCharacteristic) {
-            print("セントラルがペリフェラルからサブスクライブを解除しました。")
+        print("セントラルがペリフェラルからサブスクライブを解除しました。")
+        // セントラルをキャプチャし、あとで情報を取得できるようにする
+        self.central = central
+        if let characteristic = self.characteristic {
+            
+            // セントラルにメッセージを送信する。
+            let data = "Hello!".data(using: .utf8)!
+            peripheralManager?.updateValue(data, for: characteristic, onSubscribedCentrals: [central])
         }
+    }
+    
+    /// セントラルからの購読がキャンセルされた時に呼び出される
+    func peripheralManager(_ peripheral: CBPeripheralManager,
+                           central: CBCentral,
+                           didUnsubscribeFrom characteristic: CBCharacteristic) {
+        print("The central has unsubscribed from the peripheral")
+    }
+    
+    /// セントラルが新しいメッセージを送信したいときに呼び出される
+    func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {
+        
+    }
+    
 }
