@@ -5,8 +5,6 @@
 //  Created by kotomi takahashi on 2023/10/07.
 //
 
-import Foundation
-
 import UIKit
 
 class JoinViewController: UITableViewController {
