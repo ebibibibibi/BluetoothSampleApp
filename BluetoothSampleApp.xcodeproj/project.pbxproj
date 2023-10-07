@@ -39,6 +39,7 @@
 		80CB10D62AD191500047B5C0 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 80CB10D52AD191500047B5C0 /* MessageKit */; };
 		80CB10D92AD199790047B5C0 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB10D82AD199790047B5C0 /* JoinViewController.swift */; };
 		80CB10DB2AD199C20047B5C0 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB10DA2AD199C20047B5C0 /* TextFieldTableViewCell.swift */; };
+		80CB10DD2AD1A28D0047B5C0 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB10DC2AD1A28D0047B5C0 /* DeviceTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		8087EE162AC9C79700FBDBC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		80CB10D82AD199790047B5C0 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 		80CB10DA2AD199C20047B5C0 /* TextFieldTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldTableViewCell.swift; sourceTree = "<group>"; };
+		80CB10DC2AD1A28D0047B5C0 /* DeviceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -234,6 +236,7 @@
 				8087EDF62AC88F1100FBDBC6 /* Cells */,
 				80CB10D82AD199790047B5C0 /* JoinViewController.swift */,
 				80CB10DA2AD199C20047B5C0 /* TextFieldTableViewCell.swift */,
+				80CB10DC2AD1A28D0047B5C0 /* DeviceTableViewCell.swift */,
 			);
 			path = Join;
 			sourceTree = "<group>";
@@ -402,6 +405,7 @@
 				8087EE122AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift in Sources */,
 				80CB10DB2AD199C20047B5C0 /* TextFieldTableViewCell.swift in Sources */,
 				8087EE0A2AC8F08200FBDBC6 /* BluetoothConstants.swift in Sources */,
+				80CB10DD2AD1A28D0047B5C0 /* DeviceTableViewCell.swift in Sources */,
 				8087EDB42AC0439000FBDBC6 /* SceneDelegate.swift in Sources */,
 				8087EE022AC88FAD00FBDBC6 /* JoinTableHeaderView.swift in Sources */,
 				80CB10D92AD199790047B5C0 /* JoinViewController.swift in Sources */,
