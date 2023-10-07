@@ -73,7 +73,7 @@ extension BluetoothPeripheralManager: CBPeripheralManagerDelegate {
         guard peripheral.state == .poweredOn else { return }
         
         characteristic = CBMutableCharacteristic(type: BluetoothCharacteristic.chatID,
-                                                 properties: .notify,
+                                                 properties: [.write, .notify],
                                                  value: nil,
                                                  permissions: .writeable)
         // キャラクタリスティックを表現するサービスを作成
@@ -92,11 +92,11 @@ extension BluetoothPeripheralManager: CBPeripheralManagerDelegate {
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didSubscribeTo characteristic: CBCharacteristic) {
         print("セントラルがペリフェラルにサブスクライブしました。")
         
-        if let characteristic = self.characteristic {
-            // セントラルへメッセージを送信する。
-            let data = "Hello!".data(using: .utf8)!
-            peripheralManager?.updateValue(data, for: characteristic, onSubscribedCentrals: nil)
-        }
+        //        if let characteristic = self.characteristic {
+        //            // セントラルへメッセージを送信する。
+        //            let data = "Hello!".data(using: .utf8)!
+        //            peripheralManager?.updateValue(data, for: characteristic, onSubscribedCentrals: nil)
+        //        }
     }
     /// サブスクライブしていたセントラルがサブスクリプションを解除したときに呼び出される。
     func peripheralManager(_ peripheral: CBPeripheralManager, central: CBCentral, didUnsubscribeFrom characteristic: CBCharacteristic) {
@@ -110,17 +110,9 @@ extension BluetoothPeripheralManager: CBPeripheralManagerDelegate {
             peripheralManager?.updateValue(data, for: characteristic, onSubscribedCentrals: [central])
         }
     }
-    
-    /// セントラルからの購読がキャンセルされた時に呼び出される
-    func peripheralManager(_ peripheral: CBPeripheralManager,
-                           central: CBCentral,
-                           didUnsubscribeFrom characteristic: CBCharacteristic) {
-        print("The central has unsubscribed from the peripheral")
-    }
-    
-    /// セントラルが新しいメッセージを送信したいときに呼び出される
+    /// セントラルがこのペリフェラルにメッセージを送信したときに呼び出される。
     func peripheralManager(_ peripheral: CBPeripheralManager, didReceiveWrite requests: [CBATTRequest]) {
-        
+        //        print(requests)
     }
     
 }
