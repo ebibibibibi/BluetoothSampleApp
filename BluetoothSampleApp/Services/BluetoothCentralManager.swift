@@ -19,6 +19,9 @@ final class BluetoothCentralManager: NSObject {
     // 接続したペリフェラル
     private var peripheral: CBPeripheral?
     
+    // チャットデータを実行するキャラクタリスティック
+    private var characteristic: CBCharacteristic?
+    
     /// エリア内のperipheralデバイスのスキャン開始
     public func start() {
         // セントラルマネージャーを作成（これによりBluetoothの起動 開始）。
@@ -174,44 +177,54 @@ extension BluetoothCentralManager: CBPeripheralDelegate {
     
     /// 指定したIDに一致するcharacteristicが、ペリフェラルのサービスで見つかった。
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
-            // エラーが発生した場合の処理
-            if let error = error {
-                print("Unable to discover characteristics: \(error.localizedDescription)")
-                cleanUp()
-                return
-            }
+        // エラーが発生した場合の処理
+        if let error = error {
+            print("Unable to discover characteristics: \(error.localizedDescription)")
+            cleanUp()
+            return
+        }
         // 複数の場合に備えてループを実行
         service.characteristics?.forEach { characteristic in
-                    guard characteristic.uuid == BluetoothCharacteristic.chatID else { return }
-
-                    // characteristic購読開始。データが送信されたときに通知を受け取る。
-                    peripheral.setNotifyValue(true, for: characteristic)
-                }
-            }
+            guard characteristic.uuid == BluetoothCharacteristic.chatID else { return }
+            
+            // characteristic購読開始。データが送信されたときに通知を受け取る。
+            peripheral.setNotifyValue(true, for: characteristic)
+            // データを送信するためキャラクタリスティックへの参照を保持
+            self.characteristic = characteristic
+        }
+    }
     
     /// characteristicからの通知によって追加のデータが届く。
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         if let error = error {
-                    print("Characteristic value update failed: \(error.localizedDescription)")
-                    return
-                }
+            print("Characteristic value update failed: \(error.localizedDescription)")
+            return
+        }
         // characteristicからペイロードを取得
         let data = characteristic.value
     }
     /// ペリフェラルは、characteristicの購読が成功したかどうかを返す。
     func peripheral(_ peripheral: CBPeripheral, didUpdateNotificationStateFor characteristic: CBCharacteristic, error: Error?) {
         if let error = error {
-                    print("Characteristic は通知の更新に失敗した: \(error.localizedDescription)")
-                    return
-                }
+            print("Characteristic は通知の更新に失敗した: \(error.localizedDescription)")
+            return
+        }
         // このcharacteristicが設定したものであることを確認
         guard characteristic.uuid == BluetoothCharacteristic.chatID else { return }
         // 正常に通知として設定されているか確認
         if characteristic.isNotifying {
-                    print("Characteristic notifications が始まったよ.")
-                } else {
-                    print("Characteristic notifications は止まっている。切断します。")
-                    centralManager?.cancelPeripheralConnection(peripheral)
-                }
+            print("Characteristic notifications が始まったよ.")
+        } else {
+            print("Characteristic notifications は止まっている。切断します。")
+            centralManager?.cancelPeripheralConnection(peripheral)
+        }
+        // ペリフェラルへデータを送信する
+        let data = "Hello!".data(using: .utf8)!
+        self.peripheral!.writeValue(data, for: self.characteristic!, type: .withResponse)
+        
     }
 }
+
+
+
+
