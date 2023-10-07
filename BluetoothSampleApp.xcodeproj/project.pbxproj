@@ -36,6 +36,8 @@
 		8087EE172AC9C79700FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE162AC9C79700FBDBC6 /* ViewController.swift */; };
 		8087EE182AC9C79700FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE162AC9C79700FBDBC6 /* ViewController.swift */; };
 		8087EE192AC9C79700FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE162AC9C79700FBDBC6 /* ViewController.swift */; };
+		80CB10D62AD191500047B5C0 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 80CB10D52AD191500047B5C0 /* MessageKit */; };
+		80CB10D92AD199790047B5C0 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB10D82AD199790047B5C0 /* JoinViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,7 @@
 		8087EE0D2AC8F36600FBDBC6 /* BluetoothCentralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothCentralManager.swift; sourceTree = "<group>"; };
 		8087EE112AC8F66C00FBDBC6 /* BluetoothPeripheralManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BluetoothPeripheralManager.swift; sourceTree = "<group>"; };
 		8087EE162AC9C79700FBDBC6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		80CB10D82AD199790047B5C0 /* JoinViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JoinViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +85,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80CB10D62AD191500047B5C0 /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -226,6 +230,7 @@
 			children = (
 				8087EDF82AC88F3F00FBDBC6 /* Accessories */,
 				8087EDF62AC88F1100FBDBC6 /* Cells */,
+				80CB10D82AD199790047B5C0 /* JoinViewController.swift */,
 			);
 			path = Join;
 			sourceTree = "<group>";
@@ -264,6 +269,7 @@
 			);
 			name = BluetoothSampleApp;
 			packageProductDependencies = (
+				80CB10D52AD191500047B5C0 /* MessageKit */,
 			);
 			productName = BluetoothSampleApp;
 			productReference = 8087EDAE2AC0439000FBDBC6 /* BluetoothSampleApp.app */;
@@ -338,6 +344,8 @@
 			);
 			mainGroup = 8087EDA52AC0439000FBDBC6;
 			packageReferences = (
+				80CB10D42AD191500047B5C0 /* XCRemoteSwiftPackageReference "MessageKit" */,
+				80CB10D72AD199530047B5C0 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 8087EDAF2AC0439000FBDBC6 /* Products */;
 			projectDirPath = "";
@@ -392,6 +400,7 @@
 				8087EE0A2AC8F08200FBDBC6 /* BluetoothConstants.swift in Sources */,
 				8087EDB42AC0439000FBDBC6 /* SceneDelegate.swift in Sources */,
 				8087EE022AC88FAD00FBDBC6 /* JoinTableHeaderView.swift in Sources */,
+				80CB10D92AD199790047B5C0 /* JoinViewController.swift in Sources */,
 				8087EDE52AC1B71A00FBDBC6 /* 記事.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -732,6 +741,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		80CB10D42AD191500047B5C0 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/MessageKit/MessageKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		80CB10D72AD199530047B5C0 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/SwiftLint";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.53.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		80CB10D52AD191500047B5C0 /* MessageKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 80CB10D42AD191500047B5C0 /* XCRemoteSwiftPackageReference "MessageKit" */;
+			productName = MessageKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8087EDA62AC0439000FBDBC6 /* Project object */;
 }
