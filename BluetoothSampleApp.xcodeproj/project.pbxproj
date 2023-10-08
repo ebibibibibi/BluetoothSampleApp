@@ -36,7 +36,6 @@
 		8087EE172AC9C79700FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE162AC9C79700FBDBC6 /* ViewController.swift */; };
 		8087EE182AC9C79700FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE162AC9C79700FBDBC6 /* ViewController.swift */; };
 		8087EE192AC9C79700FBDBC6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8087EE162AC9C79700FBDBC6 /* ViewController.swift */; };
-		80CB10D62AD191500047B5C0 /* MessageKit in Frameworks */ = {isa = PBXBuildFile; productRef = 80CB10D52AD191500047B5C0 /* MessageKit */; };
 		80CB10D92AD199790047B5C0 /* JoinViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB10D82AD199790047B5C0 /* JoinViewController.swift */; };
 		80CB10DB2AD199C20047B5C0 /* TextFieldTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB10DA2AD199C20047B5C0 /* TextFieldTableViewCell.swift */; };
 		80CB10DD2AD1A28D0047B5C0 /* DeviceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80CB10DC2AD1A28D0047B5C0 /* DeviceTableViewCell.swift */; };
@@ -89,7 +88,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				80CB10D62AD191500047B5C0 /* MessageKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -275,7 +273,6 @@
 			);
 			name = BluetoothSampleApp;
 			packageProductDependencies = (
-				80CB10D52AD191500047B5C0 /* MessageKit */,
 			);
 			productName = BluetoothSampleApp;
 			productReference = 8087EDAE2AC0439000FBDBC6 /* BluetoothSampleApp.app */;
@@ -350,8 +347,6 @@
 			);
 			mainGroup = 8087EDA52AC0439000FBDBC6;
 			packageReferences = (
-				80CB10D42AD191500047B5C0 /* XCRemoteSwiftPackageReference "MessageKit" */,
-				80CB10D72AD199530047B5C0 /* XCRemoteSwiftPackageReference "SwiftLint" */,
 			);
 			productRefGroup = 8087EDAF2AC0439000FBDBC6 /* Products */;
 			projectDirPath = "";
@@ -749,33 +744,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		80CB10D42AD191500047B5C0 /* XCRemoteSwiftPackageReference "MessageKit" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/MessageKit/MessageKit";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.0.0;
-			};
-		};
-		80CB10D72AD199530047B5C0 /* XCRemoteSwiftPackageReference "SwiftLint" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/realm/SwiftLint";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.53.0;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		80CB10D52AD191500047B5C0 /* MessageKit */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 80CB10D42AD191500047B5C0 /* XCRemoteSwiftPackageReference "MessageKit" */;
-			productName = MessageKit;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 8087EDA62AC0439000FBDBC6 /* Project object */;
 }

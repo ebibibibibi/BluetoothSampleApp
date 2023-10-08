@@ -8,11 +8,12 @@
 import UIKit
 
 class DeviceTableViewCell: UITableViewCell {
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
+    
+    public func configureForDevice(named device: String) {
+        // 特定のデバイスが見つかった場合の設定
     }
-
-
-
+    public func configureForNoDevicesFound() {
+        // デバイスが見つからない場合のデフォルトのプレースホルダー状態の設定
+    }
+    
 }
