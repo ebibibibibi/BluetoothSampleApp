@@ -9,8 +9,10 @@ import UIKit
 
 class TextFieldTableViewCell: UITableViewCell, UITextFieldDelegate {
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-    }
+    func textFieldDidEndEditing(_ textField: UITextField) {
+
+        }
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+            return true
+        }
 }

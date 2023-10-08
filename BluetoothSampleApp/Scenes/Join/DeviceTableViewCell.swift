@@ -7,6 +7,8 @@
 
 import UIKit
 
+
+
 class DeviceTableViewCell: UITableViewCell {
     
     public func configureForDevice(named device: String) {

@@ -28,10 +28,16 @@ class JoinViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        tableView.register(UITableViewCell.self,
+        tableView.register(DeviceTableViewCell.self,
                            forCellReuseIdentifier: JoinViewController.deviceCellIdentifier)
         tableView.register(UINib(nibName: "TextFieldTableViewCell", bundle: nil),
                            forCellReuseIdentifier: JoinViewController.nameCellIdentifier)
+    }
+    override func viewDidAppear(_ animated: Bool) {
+        // If we're in a navigation controller, hide the bar
+        if let navigationController = self.navigationController {
+            navigationController.setNavigationBarHidden(true, animated: animated)
+        }
     }
     
     // MARK: - Table view data source
@@ -48,9 +54,23 @@ class JoinViewController: UITableViewController {
         if indexPath.section == Sections.name {
             let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.nameCellIdentifier,
                                                      for: indexPath)
+            if let nameCell = cell as? TextFieldTableViewCell {
+                // Configure callbacks
+            }
             return cell
         }
+        // セルは再利用する
+        let cell = tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier,
+                                                 for: indexPath)
+        if let deviceCell = cell as? DeviceTableViewCell {
+            deviceCell.configureForNoDevicesFound()
+        }
         
-        return tableView.dequeueReusableCell(withIdentifier: JoinViewController.deviceCellIdentifier, for: indexPath)
+        return cell
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section == Sections.availableDevices { return "Devices" }
+        return nil
     }
 }
